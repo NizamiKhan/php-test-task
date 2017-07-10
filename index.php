@@ -1,11 +1,21 @@
 <?php
 
+//Отображение ошибок
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
+
+//Убрать ограничения на время выполнения и память (для задания 1)
+ini_set("memory_limit", -1);
+set_time_limit(0);
+
+//Подключение файлов
 define('ROOT', dirname(__FILE__));
 require_once(ROOT . '/components/Autoload.php');
 
-$primeNumbers = new PrimeNumbers(10);
-echo 'Сумма простых чисел: ' . $primeNumbers->summ();
+//Задание 1
+$primeNumbers = new PrimeNumbers();
+echo 'Задание 1<br><br>';
+echo 'Сумма простых чисел меньших двух миллионов: ' . $primeNumbers->summ();
+echo '<hr>';
 
-//2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71
+//Задание 2

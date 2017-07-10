@@ -3,7 +3,7 @@
 class PrimeNumbers
 {
     private $numbers = array();
-    private const MAX = 100;
+    private const MAX = 2000000;
 
     public function __construct($max = self::MAX)
     {
@@ -11,7 +11,7 @@ class PrimeNumbers
     }
 
     //Заполняет массив простых чисел $numbers
-    public function setNumbers(int $max)
+    private function setNumbers(int $max)
     {
         for ($i = 2; $i <= $max; $i++) {
             if (PrimeNumbers::isPrimeNumber($i))
