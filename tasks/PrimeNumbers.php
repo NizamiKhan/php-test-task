@@ -3,8 +3,9 @@
 class PrimeNumbers
 {
     private $numbers = array();
+    private const MAX = 100;
 
-    public function __construct($max = 100)
+    public function __construct($max = self::MAX)
     {
         $this->setNumbers($max);
     }
@@ -13,7 +14,7 @@ class PrimeNumbers
     public function setNumbers(int $max)
     {
         for ($i = 2; $i <= $max; $i++) {
-            if (self::isPrimeNumber($i))
+            if (PrimeNumbers::isPrimeNumber($i))
                 $this->numbers[$i] = $i;
         }
     }
@@ -27,15 +28,11 @@ class PrimeNumbers
     //Сумма чисел в массиве
     public function summ()
     {
-        $summ = 0;
-        foreach ($this->numbers as $number) {
-            $summ += $number;
-        }
-        return $summ;
+        return array_sum($this->numbers);
     }
 
     //Проверка на простое число
-    private static function isPrimeNumber($number)
+    private function isPrimeNumber($number)
     {
         for ($i = 2; $i <= sqrt($number); $i++)
             if (!($number % $i)) return false;
