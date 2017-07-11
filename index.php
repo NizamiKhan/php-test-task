@@ -13,9 +13,8 @@ define('ROOT', dirname(__FILE__));
 require_once(ROOT . '/components/Autoload.php');
 
 //Задание 1
-$primeNumbers = new PrimeNumbers();
-echo 'Задание 1<br><br>';
-echo 'Сумма простых чисел меньших двух миллионов: ' . $primeNumbers->summ();
-echo '<hr>';
-
+PrimeNumbers::run();
 //Задание 2
+Library::run();
+//Задание 3
+//...

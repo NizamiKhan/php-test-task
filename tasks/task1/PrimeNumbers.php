@@ -38,4 +38,12 @@ class PrimeNumbers
             if (!($number % $i)) return false;
         return true;
     }
+
+    public static function run(){
+
+        $primeNumbers = new PrimeNumbers(100);
+        echo 'Задание 1<br><br>';
+        echo 'Сумма простых чисел меньших двух миллионов: ' . $primeNumbers->summ();
+        echo '<hr>';
+    }
 }
