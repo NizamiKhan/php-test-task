@@ -5,7 +5,8 @@ function __autoload($class_name)
     $array_paths = array(
         '/tasks/task1/',
         '/tasks/task2/',
-        '/tasks/task3/',
+        '/tasks/task3/interfaces/',
+        '/tasks/task3/impls/',
         '/components/'
     );
 

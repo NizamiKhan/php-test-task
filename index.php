@@ -17,4 +17,4 @@ PrimeNumbers::run();
 //Задание 2
 Library::run();
 //Задание 3
-//...
+Figures::run();
