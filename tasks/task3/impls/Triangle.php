@@ -6,14 +6,14 @@ class Triangle extends Figures implements Figure
     private $triangles = array();
 
     //Заполняет массив треугольников $triangles()
-    public function setTriangles()
+    private function setTriangles()
     {
         $type = lcfirst(__CLASS__);
         $this->triangles = $this->getFiguresByType($type);
     }
 
     //Возвращает массив треугольников
-    public function getTriangles(): array
+    private function getTriangles(): array
     {
         if (empty($this->triangles))
             $this->setTriangles();
@@ -38,8 +38,9 @@ class Triangle extends Figures implements Figure
         $a = $triangle['a'];
         $b = $triangle['b'];
         $c = $triangle['c'];
-        $p = ($a + $b + $c)/2;
-        $area = sqrt($p * ($p - $a) * ($p - $b) * ($p - $c));
+        $p = ($a + $b + $c) / 2;
+        $areaFormula = sqrt($p * ($p - $a) * ($p - $b) * ($p - $c));
+        $area = round($areaFormula, 2);
         return $area;
     }
 }

@@ -37,7 +37,8 @@ class Circle extends Figures implements Figure
     public function getOneArea(array $circle)
     {
         $radius = $circle['radius'];
-        $area = M_PI * pow($radius, 2);
+        $areaFormula = M_PI * pow($radius, 2);
+        $area = round($areaFormula, 2);
         return $area;
     }
 }

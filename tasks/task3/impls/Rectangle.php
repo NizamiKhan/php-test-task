@@ -6,14 +6,14 @@ class Rectangle extends Figures implements Figure
     private $rectangles = array();
 
     //Заполняет массив прямоугольников $rectangles
-    public function setRectangles()
+    private function setRectangles()
     {
         $type = lcfirst(__CLASS__);
         $this->rectangles = $this->getFiguresByType($type);
     }
 
     //Возвращает массив $rectangles
-    public function getRectangles(): array
+    private function getRectangles(): array
     {
         if (empty($this->rectangles))
             $this->setRectangles();

@@ -48,6 +48,14 @@ class Figures
         return $figures;
     }
 
+    private static function info(array $figures)
+    {
+        foreach ($figures as $figure) {
+            echo 'Фигура: ' . $figure['type'] . '<br>';
+            echo 'Площадь: ' . $figure['area'] . '<br>';
+        }
+    }
+
     public static function run()
     {
         $circles = new Circle();
@@ -56,12 +64,11 @@ class Figures
         $rectangles = $rectangles->getAreaAll();
         $triangles = new Triangle();
         $triangles = $triangles->getAreaAll();
-
         $figures = array_merge($circles, $rectangles, $triangles);
-        echo 'До сортировки';
-        var_dump($figures);
-        echo 'После';
+        echo '<h3>До сортировки</h3>';
+        Figures::info($figures);
+        echo '<h3>После</h3>';
         $sort = self::sortByArea($figures);
-        var_dump($sort);
+        Figures::info($sort);
     }
 }

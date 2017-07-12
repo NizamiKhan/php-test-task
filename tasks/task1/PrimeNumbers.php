@@ -39,9 +39,9 @@ class PrimeNumbers
         return true;
     }
 
-    public static function run(){
-
-        $primeNumbers = new PrimeNumbers(100);
+    public static function run()
+    {
+        $primeNumbers = new PrimeNumbers();
         echo 'Задание 1<br><br>';
         echo 'Сумма простых чисел меньших двух миллионов: ' . $primeNumbers->summ();
         echo '<hr>';
