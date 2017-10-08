@@ -19,3 +19,11 @@
 Получить объекты фигур, используя данные из приложенного файла [figures.json](https://gitlab.com/effective-group/php-test-task/blob/master/figures.json)
 
 Отсортировать полученную коллекцию объектов по убыванию площади фигур и вывести результат на экран.
+
+SELECT
+  full_name
+FROM author
+  JOIN author_book ON author.author_id = author_book.author_id
+  JOIN book ON author_book.book_id = book.book_id
+GROUP BY author.author_id
+HAVING count(author.author_id)<3;
